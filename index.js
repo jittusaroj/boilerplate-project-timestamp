@@ -42,8 +42,7 @@ app.get('/api/:date?', (req, res) => {
   });
 });
 
-app.get("/whoami",(req, res)=>{
-  const ipaddress = req.ip; // Use req.ip to get the client's IP address
+app.get("/api/whoami",(req, res)=>{
   res.json({ ipaddress,language:req.headers['accept-language'],software:req.headers['user-agent'] });
 })
 
